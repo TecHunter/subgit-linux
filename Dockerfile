@@ -7,8 +7,9 @@ RUN yum -y install wget && \
  yum -y install git && \
  yum -y install subversion && \
  yum -y install mod_dav_svn && \
+ yum -y install unzip && \
  yum clean all -y
-RUN wget https://subgit.com/download/subgit-3.2.3.zip
+RUN wget -q https://subgit.com/download/subgit-3.2.3.zip
 RUN unzip subgit-$SUBGIT_VERSION.zip -d /opt/
 
 ENV PATH=$PATH:/opt/subgit-$SUBGIT_VERSION/bin \
