@@ -16,4 +16,4 @@ ENV PATH=$PATH:/opt/subgit-$SUBGIT_VERSION/bin \
     GIT_REPO_PATH=/var/opt/gitlab/git-data/repositories/USER/REPOS.git \
     SVN_PROJECT_URL=http://svn.company.com/repos/project
 
-CMD["/bin/bash"]
+CMD ["/bin/bash"]
