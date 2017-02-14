@@ -1,6 +1,6 @@
 FROM oraclelinux:7.2
 
-MAINTAINER TecHunter
+MAINTAINER https://github.com/TecHunter/subgit-linux
 
 ENV SUBGIT_VERSION=3.2.3
 
@@ -11,4 +11,5 @@ ENV PATH=$PATH:/opt/subgit-$SUBGIT_VERSION/bin \
     GIT_REPO_PATH=/var/opt/gitlab/git-data/repositories/USER/REPOS.git \
     SVN_PROJECT_URL=http://svn.company.com/repos/project
 
+RUN apt-get install git subversion libapache2-svn
 CMD["/bin/bash"]
